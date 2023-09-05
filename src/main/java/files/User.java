@@ -7,8 +7,12 @@ public class User {
     // TODO: potentially change this class to be a generic one and add a CurrentUser class that inherits from this one
     // TODO: add age and maybe gender as parameters
     private final String name = "Shan";
+    private final String gender = "Mężczyzna";
+    // TODO: wiek z daty urodzenia
+    private int age = 32;
     private final float height = 1.7f;
     private float weight;
+    private CPM phisicalActivity = CPM.LEKKA_AKTYWNOSC_FIZYCZNA;
 
     //TODO: Rethink constructor
     public User() {}
@@ -25,9 +29,22 @@ public class User {
         return weight;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public static CPM getPhisicalActivity() {
+        return phisicalActivity;
+    }
+
     public void setWeight() {
         this.weight = getMyWeight();
     }
+
     public float getMyWeight() {
         //TODO: ensure exception capture
         Scanner getUserWeight = new Scanner(System.in);

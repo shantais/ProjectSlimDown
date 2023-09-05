@@ -19,5 +19,11 @@ public class Main {
 
         // method to count your water demand
         WaterDemand.getMyWaterDemand(user.getWeight());
+
+        // PPM
+        PPM.countMyBasicMetabolism (user.getGender(), user.getHeight(), user.getWeight(), user.getAge());
+
+        // CPM
+        // TODO: I need to get this class to work right
     }
 }
