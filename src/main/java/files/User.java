@@ -28,7 +28,6 @@ public class User {
     public void setWeight() {
         this.weight = getMyWeight();
     }
-
     public float getMyWeight() {
         //TODO: ensure exception capture
         Scanner getUserWeight = new Scanner(System.in);

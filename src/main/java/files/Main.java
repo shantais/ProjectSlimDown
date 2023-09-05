@@ -17,7 +17,7 @@ public class Main {
         // Using Map to store the weight and date info where: key: date and time value: weight
         Bmi.getMyBmiRange(user.getWeight(), user.getHeight());
 
-        // method to count BMI and see in what range are you currently in
-
+        // method to count your water demand
+        WaterDemand.getMyWaterDemand(user.getWeight());
     }
 }
