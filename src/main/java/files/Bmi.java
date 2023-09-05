@@ -1,13 +1,10 @@
 package files;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public enum Bmi {
-    //TODO: add age and maybe gender as parameters for checking your BMI
     SEVERE_THINNESS(0.0f,16.0f),
     MODERATE_THINNESS(16.0f,17.0f),
     MILD_THINNESS(17.0f,18.5f),
