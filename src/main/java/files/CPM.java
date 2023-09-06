@@ -7,12 +7,18 @@ public enum CPM {
     WYSOKA_AKTYWNOSC_FIZYCZNA(1.8f),
     BARDZO_WYSOKA_AKTYWNOSC_FIZYCZNA(2f);
     private final float pal;
-    private double myPpm = PPM.getMyPpm();
 
     CPM(float pal) {
         this.pal = pal;
     }
-    public double getMyCpm(){
-        return PPM.getMyPpm()*pal;
+
+    public float getPal() {
+        return pal;
+    }
+
+    public static double getMyCpm(double myPpm, float pal){
+        double cpm = myPpm*pal;
+        System.out.println("CPM, czyli potrzebujesz " + (float) cpm + "kcal dziennie.");
+        return cpm;
     }
 }

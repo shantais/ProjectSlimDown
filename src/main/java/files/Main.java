@@ -7,9 +7,7 @@ package files;
 
 public class Main {
     public static void main(String[] args) {
-        // User basic information
         User user = new User();
-
         // get current weight from user and set it in User class
         user.setWeight();
 
@@ -17,13 +15,17 @@ public class Main {
         // Using Map to store the weight and date info where: key: date and time value: weight
         Bmi.getMyBmiRange(user.getWeight(), user.getHeight());
 
+        WaterDemand waterDemand = new WaterDemand();
         // method to count your water demand
-        WaterDemand.getMyWaterDemand(user.getWeight());
+        waterDemand.getMyWaterDemand(user.getWeight());
 
         // PPM
-        PPM.countMyBasicMetabolism (user.getGender(), user.getHeight(), user.getWeight(), user.getAge());
+        PPM ppm = new PPM(user.getGender(), user.getHeight(), user.getWeight(), user.getAge());
+        double myPpm = ppm.countMyBasicMetabolism();
 
         // CPM
         // TODO: I need to get this class to work right
+        CPM myPhisicalActivity = CPM.LEKKA_AKTYWNOSC_FIZYCZNA;
+        CPM.getMyCpm(myPpm, myPhisicalActivity.getPal());
     }
 }
